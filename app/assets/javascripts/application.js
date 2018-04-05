@@ -16,3 +16,8 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $('nav').css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0}, 1000, "linear");
+});
