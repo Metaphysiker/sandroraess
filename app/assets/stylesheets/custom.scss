@@ -3,5 +3,10 @@
 }
 
 .grad-white-black {
-  background: linear-gradient(160deg, white 50%, darkslategray);
+  //background: linear-gradient(160deg, white 50%, darkslategray);
+  background: radial-gradient(at top left, lightgray ,darkslategray);
+}
+
+.darkgoldenrod{
+  background-color: darkgoldenrod !important;
 }

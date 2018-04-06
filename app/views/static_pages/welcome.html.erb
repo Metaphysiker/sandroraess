@@ -1,25 +1,40 @@
-<div id="change">
-  <p>
-    <%= t('hello') %>
-  </p>
+<div class="jumbotron darkgoldenrod">
+  <div class="row">
 
-</div>
+    <div class="col-lg-6 col-md-4 col-sm-12 mb-4">
+      <div class="text-center p-1">
+        <%= image_tag("personalfoto.jpg", class: "img-fluid rounded") %>
+        <br>
+        <br>
+        <p>
+          <b>
+            Sandro Räss
+          </b>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-8 col-sm-12 text-justify">
+      <h1 class="text-center"><%= t 'aboutme' %></h1>
+      <div class="text-justify">
+        <ul>
+        <li class="mb-3">
+          Basically, I'm a Philosopher, Programmer and Death Metaller.
+        </li>
+          <li class="mb-3">
+            In need of some <b>wisdom?</b> Then I'm the guy for you. I am also a pretty good at lying and leaving bad impressions.
+          </li>
+          <li class="mb-3">
+          I care about animals. In fact, I care so much about them, I don't even eat them. Crazy, right?
+        </li>
+          <li class="mb-3">
+          Check out my website for some information, music and programming stuff!
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<div id="change" class="left">
-  <p>
-    <%= t('hello') %>
-  </p>
+  <hr/>
+  <br>
 
-</div>
-
-<div id="change" class="right">
-  <p>
-    <%= t('hello') %>
-  </p>
-
-</div>
-
-<a href="/">My Link</a>
-
-
-<div class="p-3 mb-2 bg-gradient-dark text-white">.bg-gradient-dark</div>
+  </div>

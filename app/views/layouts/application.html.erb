@@ -28,7 +28,7 @@
   </nav>
 
 
-  <div class="container maincontent hiddenfromstart">
+  <div class="container">
 
     <% if notice %>
         <div class="alert alert-success" role="alert">
@@ -41,6 +41,8 @@
           <%= alert %>
         </div>
     <% end %>
+
+
 
     <%= yield %>
   </div>

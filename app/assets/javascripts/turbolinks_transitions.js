@@ -38,14 +38,30 @@ $( document ).ready(function() {
 
     };
 
+    //basic
     $.BasicIn = function(){
       console.log("basic");
-        $(".maincontent").addClass("animated fadeInDown");
+        $(".basic").addClass("animated fadeInDown");
     };
 
     $.BasicOut = function(){
         console.log("basic");
-        $(".maincontent").addClass("animated fadeOutUp");
+        $(".basic").addClass("animated fadeOutUp");
+    };
+
+    $.WelcomeIn = function(){
+        console.log("welcome");
+        $(".welcome").addClass("animated fadeInDown");
+    };
+
+    $.WelcomeOut = function(){
+        console.log("welcome");
+        $(".welcome").addClass("animated fadeInDown");
+    };
+
+    $.BasicOut = function(){
+        console.log("basic");
+        $(".basic").addClass("animated fadeOutUp");
     };
 
     $('a').click(function (e) {
@@ -58,7 +74,7 @@ $( document ).ready(function() {
 
         setTimeout(function(){
             window.location = goTo;
-        },1000);
+        },500);
     });
 
 
