@@ -15,11 +15,5 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require turbolinks_transitions
+//= require transitions
 //= require_tree .
-
-
-(function() {
-    window.App || (window.App = {});
-
-}).call(this);

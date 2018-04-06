@@ -19,9 +19,14 @@ $( document ).ready(function() {
         mode = mode || "Basic";
 
         console.log("In");
+        console.log("mode: " + mode);
 
         if (mode == "Basic") {
             $.BasicOut();
+        } else if (mode == "Welcome"){
+            $.WelcomeOut();
+        } else if (mode == "Wisdom"){
+            $.WisdomOut();
         }
     };
 
@@ -31,9 +36,14 @@ $( document ).ready(function() {
         mode = mode || "Basic";
 
         console.log("In");
+        console.log("mode: " + mode);
 
         if (mode == "Basic") {
             $.BasicIn();
+        } else if (mode == "Welcome"){
+            $.WelcomeIn();
+        } else if (mode == "Wisdom"){
+            $.WisdomIn();
         }
 
     };
@@ -49,20 +59,45 @@ $( document ).ready(function() {
         $(".basic").addClass("animated fadeOutUp");
     };
 
+    //welcome
     $.WelcomeIn = function(){
-        console.log("welcome");
-        $(".welcome").addClass("animated fadeInDown");
+        console.log("welcome in");
+        $(".jumbotron").addClass('darkgoldenrod');
+        $("h1").addClass("animated fadeInDown");
+
+        $( "li" ).each(function( index ) {
+            console.log(index);
+            $(this).delay(200*index).queue(function() {
+                $(this).addClass('animated fadeInRight').dequeue();
+            });
+        });
+
     };
 
     $.WelcomeOut = function(){
-        console.log("welcome");
-        $(".welcome").addClass("animated fadeInDown");
+        $("body").css("overflow", "hidden");
+        console.log("welcome out");
+        $("h1").addClass("animated fadeOutUp");
+
+        $($( "li" ).get().reverse()).each(function( index ) {
+            console.log(index);
+            $(this).delay(200*index).queue(function() {
+                $(this).addClass('animated fadeOutRight').dequeue();
+            });
+        });
+
     };
 
-    $.BasicOut = function(){
-        console.log("basic");
-        $(".basic").addClass("animated fadeOutUp");
+    $.WisdomIn = function(){
+        console.log("wisdom in");
+        //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
+        $(".jumbotron").addClass('indianred')
     };
+
+    $.WisdomOut = function(){
+
+    };
+
 
     $('a').click(function (e) {
         e.preventDefault();// prevent default anchor behavior
@@ -70,11 +105,11 @@ $( document ).ready(function() {
 
         // do something while timeOut ticks ...
 
-        $.TransitionOut();
+        $.TransitionOut($("#transition").text());
 
         setTimeout(function(){
             window.location = goTo;
-        },500);
+        },1000);
     });
 
 
