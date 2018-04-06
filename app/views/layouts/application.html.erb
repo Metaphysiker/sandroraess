@@ -30,20 +30,6 @@
 
   <div class="container">
 
-    <% if notice %>
-        <div class="alert alert-success" role="alert">
-          <%= notice %>
-        </div>
-    <% end %>
-
-    <% if alert %>
-        <div class="alert alert-warning" role="alert">
-          <%= alert %>
-        </div>
-    <% end %>
-
-
-
     <%= yield %>
   </div>
 
@@ -52,7 +38,9 @@
   </div>
 
   <div class="text-center fixed-bottom grey-bg p-2 navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Sandro Räss</a>
+    <%= link_to root_path do %>
+        <div class="navbar-brand d-inline">Sandro Räss</div>
+    <% end %>
   </div>
 
 
