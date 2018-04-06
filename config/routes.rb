@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get '/wisdom', to: 'static_pages#wisdom'
 
+  get '/music', to: 'static_pages#music'
+
 end

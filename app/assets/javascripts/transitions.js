@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    current_color_class = "darkgoldenrod";
+
     $.MyFunction = function()
     {
         console.log("yeeeha");
@@ -27,7 +29,10 @@ $( document ).ready(function() {
             $.WelcomeOut();
         } else if (mode == "Wisdom"){
             $.WisdomOut();
+        }  else if (mode == "Music"){
+            $.MusicOut();
         }
+
     };
 
 
@@ -44,6 +49,8 @@ $( document ).ready(function() {
             $.WelcomeIn();
         } else if (mode == "Wisdom"){
             $.WisdomIn();
+        }  else if (mode == "Music"){
+            $.MusicIn();
         }
 
     };
@@ -65,7 +72,7 @@ $( document ).ready(function() {
         $(".jumbotron").addClass('darkgoldenrod');
         $("h1").addClass("animated fadeInDown");
 
-        $( "li" ).each(function( index ) {
+        $( ".jumbotron" ).find("li").each(function( index ) {
             console.log(index);
             $(this).delay(200*index).queue(function() {
                 $(this).addClass('animated fadeInRight').dequeue();
@@ -79,7 +86,7 @@ $( document ).ready(function() {
         console.log("welcome out");
         $("h1").addClass("animated fadeOutUp");
 
-        $($( "li" ).get().reverse()).each(function( index ) {
+        $($( ".jumbotron" ).find("li").get().reverse()).each(function( index ) {
             console.log(index);
             $(this).delay(200*index).queue(function() {
                 $(this).addClass('animated fadeOutRight').dequeue();
@@ -88,6 +95,7 @@ $( document ).ready(function() {
 
     };
 
+    //wisdom
     $.WisdomIn = function(){
         console.log("wisdom in");
         //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
@@ -98,18 +106,30 @@ $( document ).ready(function() {
 
     };
 
+    //music
+    $.MusicIn = function(){
+        console.log("wisdom in");
+        //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
+        $(".jumbotron").addClass('darkblue')
+    };
+
+    $.MusicOut = function(){
+
+    };
+
 
     $('a').click(function (e) {
         e.preventDefault();// prevent default anchor behavior
         var goTo = this.getAttribute("href"); // store anchor href
 
+        $(".jumbotron").attr('class','jumbotron darkgoldenrod');
         // do something while timeOut ticks ...
 
         $.TransitionOut($("#transition").text());
 
         setTimeout(function(){
             window.location = goTo;
-        },1000);
+        },750);
     });
 
 
