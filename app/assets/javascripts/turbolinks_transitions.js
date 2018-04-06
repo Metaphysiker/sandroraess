@@ -12,19 +12,41 @@ $( document ).ready(function() {
         $("#change").addClass("animated bounce");
     };
 
-    $.TransitionOut = function()
+    $.TransitionOut = function(mode)
     {
         console.log("Out");
-        $(".left").addClass("animated fadeOutLeft");
+
+        mode = mode || "Basic";
+
+        console.log("In");
+
+        if (mode == "Basic") {
+            $.BasicOut();
+        }
     };
 
 
-    $.TransitionIn = function()
+    $.TransitionIn = function(mode)
     {
-        console.log("Inx");
-        $(".left").addClass("animated fadeInLeft");
+        mode = mode || "Basic";
+
+        console.log("In");
+
+        if (mode == "Basic") {
+            $.BasicIn();
+        }
+
     };
 
+    $.BasicIn = function(){
+      console.log("basic");
+        $(".maincontent").addClass("animated fadeInDown");
+    };
+
+    $.BasicOut = function(){
+        console.log("basic");
+        $(".maincontent").addClass("animated fadeOutUp");
+    };
 
     $('a').click(function (e) {
         e.preventDefault();// prevent default anchor behavior
