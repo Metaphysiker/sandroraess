@@ -90,7 +90,7 @@ $( document ).ready(function() {
 
         $($( ".jumbotron" ).find("li").get().reverse()).each(function( index ) {
             console.log(index);
-            $(this).delay(150*index).queue(function() {
+            $(this).delay(100*index).queue(function() {
                 $(this).addClass('animated fadeOutRight').dequeue();
             });
         });
