@@ -5,6 +5,9 @@
 .grad-white-black {
   //background: linear-gradient(160deg, white 50%, darkslategray);
   background: radial-gradient(at top left, lightgray ,darkslategray);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .darkgoldenrod{
@@ -15,10 +18,15 @@
   background-color: indianred !important;
 }
 
-.darkblue {
+.cadetblue {
   background-color: cadetblue !important;
 }
 
 .jumbotron {
-  transition:background-color 0.75s ease !important;
+  transition: background-color 0.75s ease !important;
+}
+
+.height-image {
+ // height: 200px !important;
+  height: 50% !important;
 }

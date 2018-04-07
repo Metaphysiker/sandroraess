@@ -20,7 +20,6 @@ $( document ).ready(function() {
 
         mode = mode || "Basic";
 
-        console.log("In");
         console.log("mode: " + mode);
 
         if (mode == "Basic") {
@@ -68,13 +67,15 @@ $( document ).ready(function() {
 
     //welcome
     $.WelcomeIn = function(){
+
         console.log("welcome in");
-        $(".jumbotron").addClass('darkgoldenrod');
+        //$(".jumbotron").addClass('darkgoldenrod');
+        $(".picture").addClass("animated fadeInLeft");
         $("h1").addClass("animated fadeInDown");
 
         $( ".jumbotron" ).find("li").each(function( index ) {
             console.log(index);
-            $(this).delay(200*index).queue(function() {
+            $(this).delay(150*index).queue(function() {
                 $(this).addClass('animated fadeInRight').dequeue();
             });
         });
@@ -85,21 +86,22 @@ $( document ).ready(function() {
         $("body").css("overflow", "hidden");
         console.log("welcome out");
         $("h1").addClass("animated fadeOutUp");
+        $(".picture").addClass("animated fadeOutLeft");
 
         $($( ".jumbotron" ).find("li").get().reverse()).each(function( index ) {
             console.log(index);
-            $(this).delay(200*index).queue(function() {
+            $(this).delay(150*index).queue(function() {
                 $(this).addClass('animated fadeOutRight').dequeue();
             });
         });
-
     };
 
     //wisdom
     $.WisdomIn = function(){
+
         console.log("wisdom in");
         //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
-        $(".jumbotron").addClass('indianred')
+        //$(".jumbotron").addClass('indianred')
     };
 
     $.WisdomOut = function(){
@@ -108,21 +110,40 @@ $( document ).ready(function() {
 
     //music
     $.MusicIn = function(){
-        console.log("wisdom in");
-        //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
-        $(".jumbotron").addClass('darkblue')
+        console.log("music in");
+
+        $(".picture").addClass("animated fadeInDown");
+        $("h1").addClass("animated fadeInDown");
+
+        $( ".jumbotron" ).find("li").each(function( index ) {
+
+            $(this).delay(150*index).queue(function() {
+                $(this).addClass('animated fadeInUp').dequeue();
+            });
+        });
     };
 
     $.MusicOut = function(){
+        console.log("music out");
 
+        $("h1").addClass("animated fadeOutUp");
+        $(".picture").addClass("animated fadeOutUp");
+
+        $($( ".jumbotron" ).find("li").get().reverse()).each(function( index ) {
+            console.log(index);
+            $(this).delay(50*index).queue(function() {
+                $(this).addClass('animated fadeOutDown').dequeue();
+            });
+        });
     };
 
 
     $('a').click(function (e) {
         e.preventDefault();// prevent default anchor behavior
         var goTo = this.getAttribute("href"); // store anchor href
+        var backgroundcolor = this.getAttribute("backgroundcolor");
 
-        $(".jumbotron").attr('class','jumbotron darkgoldenrod');
+        $(".jumbotron").attr('class','jumbotron ' + backgroundcolor);
         // do something while timeOut ticks ...
 
         $.TransitionOut($("#transition").text());
@@ -131,9 +152,6 @@ $( document ).ready(function() {
             window.location = goTo;
         },750);
     });
-
-
-
 
 
     (function ( $ ) {
