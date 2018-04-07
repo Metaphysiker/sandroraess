@@ -3,7 +3,7 @@
 <div class="jumbotron darkgoldenrod">
   <div class="row">
 
-    <div class="col-lg-6 col-md-4 col-sm-12 mb-4 picture hiddenfromstart">
+    <div class="col-lg-6 col-md-4 mb-4 picture hiddenfromstart d-none d-md-block">
       <div class="text-center p-1">
         <%= image_tag("personalfotoc.jpg", class: "img-fluid rounded") %>
         <br>
@@ -15,6 +15,19 @@
         </p>
       </div>
     </div>
+
+    <div class="col-sm-12 mb-4 picture hiddenfromstart d-md-none	">
+      <div class="text-center p-1">
+        <p>
+          <b>
+            Sandro Räss
+          </b>
+        </p>
+        <%= image_tag("personalfotoc.jpg", class: "img-fluid rounded") %>
+      </div>
+    </div>
+
+
     <div class="col-lg-6 col-md-8 col-sm-12 text-justify">
       <h1 class="text-center hiddenfromstart"><%= t 'aboutme' %></h1>
       <div class="text-justify">

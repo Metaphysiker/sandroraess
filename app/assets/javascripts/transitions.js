@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    var TIME_BEFORE_LOAD = 750;
+    var TIME_BEFORE_LOAD = 500;
 
     current_color_class = "darkgoldenrod";
 
@@ -142,6 +142,7 @@ $( document ).ready(function() {
 
     $('a').click(function (e) {
         e.preventDefault();// prevent default anchor behavior
+        $('.navbar-collapse').collapse('hide');
         var goTo = this.getAttribute("href"); // store anchor href
         var backgroundcolor = this.getAttribute("backgroundcolor");
 
