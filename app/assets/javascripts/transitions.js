@@ -131,7 +131,7 @@ $( document ).ready(function() {
 
         $($( ".jumbotron" ).find("li").get().reverse()).each(function( index ) {
             console.log(index);
-            $(this).delay(50*index).queue(function() {
+            $(this).delay(5*index).queue(function() {
                 $(this).addClass('animated fadeOutDown').dequeue();
             });
         });
@@ -150,7 +150,7 @@ $( document ).ready(function() {
 
         setTimeout(function(){
             window.location = goTo;
-        },750);
+        },500);
     });
 
 
