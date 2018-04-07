@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    var TIME_BEFORE_LOAD = 750;
+
     current_color_class = "darkgoldenrod";
 
     $.MyFunction = function()
@@ -150,7 +152,7 @@ $( document ).ready(function() {
 
         setTimeout(function(){
             window.location = goTo;
-        },500);
+        },TIME_BEFORE_LOAD);
     });
 
 

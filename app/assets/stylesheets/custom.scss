@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden; // hide horizontal
+}
+
 .hiddenfromstart {
   opacity: 0;
 }
@@ -23,5 +27,5 @@
 }
 
 .jumbotron {
-  transition: background-color 0.5s ease !important;
+  transition: background-color 1s ease !important;
 }
