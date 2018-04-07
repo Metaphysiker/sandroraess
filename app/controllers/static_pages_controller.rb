@@ -12,4 +12,8 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def hire
+
+  end
+
 end

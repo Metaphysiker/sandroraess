@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get '/music', to: 'static_pages#music'
 
+  get '/hire', to: 'static_pages#hire'
+
 end
