@@ -16,7 +16,7 @@
         If you are a charity-organization, I might do it for free, just contact me!
       </p>
 
-      <button type="button" class="btn btn-success btn-lg btn-block hireme1 multilinebutton">Hire me as a programmer</button>
+      <button type="button" data-target="contact1" class="btn btn-success btn-lg btn-block multilinebutton">Hire me as a programmer</button>
       <div id="contact1" class="hiddenfromstart  d-none m-5">
         <p>
           <b>Mail: </b><a href="mailto:sandro.raess@philosophie.ch">sandro.raess_at_philosophie.ch</a><br>
@@ -24,13 +24,16 @@
           <b>Phone: </b>079 428 56 16
         </p>
       </div>
+      <hr/>
     </div>
-
     <div class="col-12 text-center">
       <p>
-        In need of some philosophical input? I'll bring you some wisdom, I can guarantee you that!
+        In need of some philosophical input?
       </p>
-      <button type="button" class="btn btn-success btn-lg btn-block hireme2 multilinebutton">Hire me as a philosopher</button>
+      <p>
+        I'll bring you some wisdom, I can guarantee you that!
+      </p>
+      <button type="button" data-target="contact2" class="btn btn-success btn-lg btn-block multilinebutton">Hire me as a philosopher</button>
 
       <div id="contact2" class="hiddenfromstart  d-none m-5">
         <p>
@@ -42,113 +45,75 @@
       <br>
       <br>
 
-      <button id="why1" type="button" class="btn btn-primary btn-lg btn-block multilinebutton">Wait, wait, wait... <br> Why on earth would anyone hire a philosopher?</button>
+      <button data-target="why1" type="button" class="btn btn-primary btn-lg btn-block multilinebutton mb-4">Wait, wait, wait... <br> Why on earth would anyone hire a philosopher?</button>
 
-    <p>
-      Well, one reason you might need a philosopher is because you might be facing <b>philosophical problems</b>.
-    </p>
-    <p>
-      Simply put, there are <b>two kinds of philosophical problems</b>, namely, <b> ethical </b> and <b>conceptual</b>.
-      <ul>
-        <li>Ethical </li>
-        <li></li>
-      </ul>
-      <b></b>
-    </p>
+      <div id="why1" class="d-none">
+        <p>
+          Well, one reason you might need a philosopher is because you might be facing <b>philosophical problems</b>.
+        </p>
+        <p>
+          Simply put, there are <b>two kinds</b> of philosophical problems: <b> ethical </b> and <b>conceptual</b>.
+        </p>
+        <div class="border border-info rounded text-justify p-3">
+          <p>
+            <b>Ethical problems</b> concern questions about <b>how we should live</b> and <b>how we should treat each others</b>.
+            Philosophers are well-equipped to deal with questions about <b>justice</b> and <b>fairness</b>, <b>duties</b> and <b>rights</b>, <b>happiness</b> and <b>well-being.</b>
+          </p>
+          <p>
+            However, <b>you probably don't give a shit about others or other living beings</b>, therefore you probably don't care about ethical problems in the first place.
+          </p>
+        </div>
+        <br>
 
-    </div>
+        <div class="border border-info rounded text-justify p-3">
+          <p>
+            <b>Conceptual problems</b> concern questions about <b>understanding</b> and <b>comprehension</b>.
+            Sometimes, our problems don't consist in our lack of knowledge or our lack in skill but <b>in our failure to understand the issues and concepts at hand</b>.
+          </p>
+          <p>
+            Philosophers are well-equipped to tackle conceptual problems <b>for they possess acumen and ingenuity</b> and <b>they master the tools of conceptual and logical analysis</b>.
+          </p>
+      </div>
+        <br>
+        <br>
+        <button data-target="why2" type="button" class="btn btn-primary btn-lg btn-block multilinebutton mb-4">We don't have any philosophical problems.</button>
 
+      </div>
 
-    <div class="col-12 text-justify">
+      <div id="why2" class="d-none">
+        <p>
+          In that case, you might hire a philosopher because of their uniqueness and abilities.
+          Well, one reason you might need a philosopher is because you might be facing <b>philosophical problems</b>.
+        </p>
+        <p>
+          List of abilities.
+        </p>
+      </div>
 
-      <p>
-        Hire me as a programmer
-      </p>
-
-      <p>
-        Hire me as a philosopher
-      </p>
-
-      <p>
-        Why on earth should anyone hire a philosopher?
-        Philosophical problems.
-      </p>
-      <p>
-        If you have to use arguments, <b>you have already lost</b>.
-        Ordinary People are <b>creatures of habit</b>.
-        This means that ordinary people, <b>even if they accept an argument</b>, likely won't change their ways because doing so would require <b>work and a strong will</b>.
-        Further, to properly consider an argument requires an <b>aspiration, a desire to know the truth</b>, which ordinary people often lack.
-        Therefore, using arguments in order to deal with ordinary people is rather <b>pointless</b>.
-      </p>
-      <p>
-
-        Two options come into mind:
-      <ul>
-        <li class="mb-3">
-          <b>Proper Upbringing and Education: </b> We educate our children and fellow human beings in a way that makes them <b>courageous, reasonable and virtuous</b>.
-        </li>
-        <li class="mb-3">
-          <b>Influence Culture: </b> Change culture in a way that ordinary people in it are disposed to do right thing anyway.
-        </li>
-      </ul>
-
-      The first option
-      </p>
-      <hr/>
-      <br>
-    </div>
   </div>
+</div>
 </div>
 
 <script>
 
     $( document ).ready(function() {
 
-        $( ".hireme1" ).click(function() {
-            var div = $( "#contact1" );
-            if (div.hasClass("d-none")){
-               div.removeClass("animated fadeOutUp");
-                div.removeClass("d-none").addClass("animated fadeInDown");
-            } else {
-                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
-                div.removeClass("animated fadeInDown");
-                div.addClass("animated fadeOutUp").delay(500).queue(function(){
-                  div.addClass("d-none").dequeue();
-                });
-            }
-
+        $(".btn").click(function(){
+            console.log($(this).attr( "data-target" ));
+            toggleButton($("#" + $(this).attr( "data-target" )));
         });
 
-        $( ".hireme2" ).click(function() {
-            var div = $( "#contact2" );
-            if (div.hasClass("d-none")){
-                div.removeClass("animated fadeOutUp");
-                div.removeClass("d-none").addClass("animated fadeInDown");
-            } else {
-                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
-                div.removeClass("animated fadeInDown");
-                div.addClass("animated fadeOutUp").delay(500).queue(function(){
-                    div.addClass("d-none").dequeue();
-                });
-            }
-
-        });
-
-        $( "#why1" ).click(function() {
-            var div = $( "#contact2" );
-            if (div.hasClass("d-none")){
-                div.removeClass("animated fadeOutUp");
-                div.removeClass("d-none").addClass("animated fadeInDown");
-            } else {
-                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
-                div.removeClass("animated fadeInDown");
-                div.addClass("animated fadeOutUp").delay(500).queue(function(){
-                    div.addClass("d-none").dequeue();
-                });
-            }
-
-        });
-
+        function toggleButton(div) {
+                if (div.hasClass("d-none")){
+                    div.removeClass("animated fadeOutDown");
+                    div.removeClass("d-none").addClass("animated fadeInUp");
+                } else {
+                    div.removeClass("animated fadeInUp");
+                    div.addClass("animated fadeOutDown").delay(500).queue(function(){
+                        div.addClass("d-none").dequeue();
+                    });
+                }
+        }
     });
 
 
