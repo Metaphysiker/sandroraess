@@ -3,7 +3,7 @@
 <div class="jumbotron honeydew">
   <div class="row">
     <div class="col-12 text-justify">
-      <h1 class="text-center">
+      <h1 class="text-center hiddenfromstart">
         <%= t 'hire' %>
       </h1>
     </div>
@@ -68,10 +68,10 @@
         <div class="border border-info rounded text-justify p-3">
           <p>
             <b>Conceptual problems</b> concern questions about <b>understanding</b> and <b>comprehension</b>.
-            Sometimes, our problems don't consist in our lack of knowledge or our lack in skill but <b>in our failure to understand the issues or concepts at hand</b>.
+            Sometimes, our problems don't result from a lack of knowledge or a lack in skill but <b>from our failure to understand the issues or problems at hand</b>.
           </p>
           <p>
-            Philosophers are well-equipped to tackle conceptual problems <b>for they master the tools of logical and conceptual analysis</b>, as well as the manifold techniques of philosophical scrutiny.
+            Philosophers are well-equipped to tackle conceptual problems <b>for they master the tools of logical and conceptual analysis</b>, as well as <b>the various techniques of philosophical scrutiny</b>.
           </p>
       </div>
         <br>
@@ -83,7 +83,6 @@
       <div id="why2" class="d-none">
         <p>
           In that case, you might hire a philosopher because of their uniqueness and abilities.
-          Well, one reason you might need a philosopher is because you might be facing <b>philosophical problems</b>.
         </p>
         <p>
           List of abilities.
@@ -105,11 +104,14 @@
 
         function toggleButton(div) {
                 if (div.hasClass("d-none")){
-                    div.removeClass("animated fadeOutDown");
-                    div.removeClass("d-none").addClass("animated fadeInUp");
+                    div.removeClass("animated zoomOut");
+                    div.removeClass("d-none").addClass("animated fadeIn");
+                    $('html, body').animate({
+                        scrollTop:div.offset().top
+                    },'slow');
                 } else {
-                    div.removeClass("animated fadeInUp");
-                    div.addClass("animated fadeOutDown").delay(500).queue(function(){
+                    div.removeClass("animated fadeIn");
+                    div.addClass("animated zoomOut").delay(500).queue(function(){
                         div.addClass("d-none").dequeue();
                     });
                 }

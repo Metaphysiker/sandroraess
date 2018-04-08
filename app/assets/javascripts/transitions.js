@@ -143,7 +143,7 @@ $( document ).ready(function() {
 
     //wisdom
     $.HireIn = function(){
-
+        $("h1").addClass("animated fadeInDown");
         console.log("hire in");
         //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
         //$(".jumbotron").addClass('indianred')
@@ -156,8 +156,7 @@ $( document ).ready(function() {
         });
 
         $( ".btn" ).each(function( index ) {
-            console.log( 350*(index+3) );
-            $(this).delay(350*(index+4)).queue(function() {
+            $(this).delay(250*(index+4)).queue(function() {
                 $(this).addClass('animated bounceIn').dequeue();
             });
         });
