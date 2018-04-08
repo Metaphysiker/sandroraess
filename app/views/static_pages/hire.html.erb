@@ -8,24 +8,54 @@
       </h1>
     </div>
 
-    <div class="col-6 text-center">
-      <button type="button" class="btn btn-success btn-lg btn-block">Hire me as a programmer</button>
-      <br>
+    <div class="col-12 text-center mb-5">
       <p>
-        Need a web application?
+        Need a web application? I'll create a Ruby-on-Rails app for you!
       </p>
       <p>
-        If you are a charity-organization, I might do it for free, just send me an eMail!
+        If you are a charity-organization, I might do it for free, just contact me!
       </p>
-      <p>
-        <a href="mailto:sandro.raess@philosophie.ch">mail</a>
-      </p>
+
+      <button type="button" class="btn btn-success btn-lg btn-block hireme1 multilinebutton">Hire me as a programmer</button>
+      <div id="contact1" class="hiddenfromstart  d-none m-5">
+        <p>
+          <b>Mail: </b><a href="mailto:sandro.raess@philosophie.ch">sandro.raess_at_philosophie.ch</a><br>
+          <b>Skype: </b>crystal-metal<br>
+          <b>Phone: </b>079 428 56 16
+        </p>
+      </div>
     </div>
 
-    <div class="col-6">
-      <button type="button" class="btn btn-success btn-lg btn-block">Hire me as a philosopher</button>
+    <div class="col-12 text-center">
+      <p>
+        In need of some philosophical input? I'll bring you some wisdom, I can guarantee you that!
+      </p>
+      <button type="button" class="btn btn-success btn-lg btn-block hireme2 multilinebutton">Hire me as a philosopher</button>
 
-      <button type="button" class="btn btn-primary btn-lg btn-block multilinebutton">Wait, wait, wait... <br> Why on earth would anyone hire a philosopher?</button>
+      <div id="contact2" class="hiddenfromstart  d-none m-5">
+        <p>
+          <b>Mail: </b><a href="mailto:sandro.raess@philosophie.ch">sandro.raess_at_philosophie.ch</a><br>
+          <b>Skype: </b>crystal-metal<br>
+          <b>Phone: </b>079 428 56 16
+        </p>
+      </div>
+      <br>
+      <br>
+
+      <button id="why1" type="button" class="btn btn-primary btn-lg btn-block multilinebutton">Wait, wait, wait... <br> Why on earth would anyone hire a philosopher?</button>
+
+    <p>
+      Well, one reason you might need a philosopher is because you might be facing <b>philosophical problems</b>.
+    </p>
+    <p>
+      Simply put, there are <b>two kinds of philosophical problems</b>, namely, <b> ethical </b> and <b>conceptual</b>.
+      <ul>
+        <li>Ethical </li>
+        <li></li>
+      </ul>
+      <b></b>
+    </p>
+
     </div>
 
 
@@ -69,3 +99,58 @@
     </div>
   </div>
 </div>
+
+<script>
+
+    $( document ).ready(function() {
+
+        $( ".hireme1" ).click(function() {
+            var div = $( "#contact1" );
+            if (div.hasClass("d-none")){
+               div.removeClass("animated fadeOutUp");
+                div.removeClass("d-none").addClass("animated fadeInDown");
+            } else {
+                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
+                div.removeClass("animated fadeInDown");
+                div.addClass("animated fadeOutUp").delay(500).queue(function(){
+                  div.addClass("d-none").dequeue();
+                });
+            }
+
+        });
+
+        $( ".hireme2" ).click(function() {
+            var div = $( "#contact2" );
+            if (div.hasClass("d-none")){
+                div.removeClass("animated fadeOutUp");
+                div.removeClass("d-none").addClass("animated fadeInDown");
+            } else {
+                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
+                div.removeClass("animated fadeInDown");
+                div.addClass("animated fadeOutUp").delay(500).queue(function(){
+                    div.addClass("d-none").dequeue();
+                });
+            }
+
+        });
+
+        $( "#why1" ).click(function() {
+            var div = $( "#contact2" );
+            if (div.hasClass("d-none")){
+                div.removeClass("animated fadeOutUp");
+                div.removeClass("d-none").addClass("animated fadeInDown");
+            } else {
+                //$( "#contact1" ).addClass("animated fadeOutUp").delay(300).addClass("d-none");
+                div.removeClass("animated fadeInDown");
+                div.addClass("animated fadeOutUp").delay(500).queue(function(){
+                    div.addClass("d-none").dequeue();
+                });
+            }
+
+        });
+
+    });
+
+
+
+</script>
