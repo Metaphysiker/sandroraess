@@ -52,6 +52,8 @@ $( document ).ready(function() {
             $.WisdomIn();
         }  else if (mode == "Music"){
             $.MusicIn();
+        } else if (mode == "Hire"){
+            $.HireIn();
         }
 
     };
@@ -137,6 +139,29 @@ $( document ).ready(function() {
                 $(this).addClass('animated fadeOutDown').dequeue();
             });
         });
+    };
+
+    //wisdom
+    $.HireIn = function(){
+
+        console.log("hire in");
+        //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
+        //$(".jumbotron").addClass('indianred')
+
+        $( ".animated-divs" ).each(function( index ) {
+
+            $(this).delay(350*index).queue(function() {
+                $(this).addClass('animated bounceIn').dequeue();
+            });
+        });
+
+        $( ".btn" ).each(function( index ) {
+            console.log( 350*(index+3) );
+            $(this).delay(350*(index+4)).queue(function() {
+                $(this).addClass('animated bounceIn').dequeue();
+            });
+        });
+
     };
 
 
