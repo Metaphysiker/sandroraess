@@ -164,7 +164,7 @@ $( document ).ready(function() {
     };
 
 
-    $('ax').click(function (e) { //put 'a' in there
+    $('#ggax').click(function (e) { //put 'a' in there
         e.preventDefault();// prevent default anchor behavior
         $('.navbar-collapse').collapse('hide');
         var goTo = this.getAttribute("href"); // store anchor href
