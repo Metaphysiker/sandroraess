@@ -11,4 +11,9 @@ Visits total: <%= Ahoy::Visit.all.count %>
 <br>
 
 <%= bar_chart Ahoy::Event.select(:visit_id).distinct.group(:properties).count %>
+
+<br>
+<%= bar_chart Ahoy::Event.select(:visit_id).distinct.where("name like ?", "hire:%").group(:name).count %>
 </div>
+
+
