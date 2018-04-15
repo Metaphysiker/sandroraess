@@ -3,6 +3,7 @@
   <head>
     <title>Sandro Räss</title>
     <%= csrf_meta_tags %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
     <%= stylesheet_link_tag    'application' %>
     <%= javascript_include_tag 'application' %>
@@ -24,13 +25,13 @@
           <%= link_to "About Me", root_path, class:"nav-link", backgroundcolor: "darkgoldenrod" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Hire Me", hire_path, style: "width: 72px", class:"nav-link border border-info rounded pl-1", backgroundcolor: "honeydew" %>
-        </li>
-        <li class="nav-item">
           <%= link_to "Wisdom", wisdom_path, class:"nav-link", backgroundcolor: "indianred"  %>
         </li>
         <li class="nav-item">
           <%= link_to "Music", music_path, class:"nav-link", backgroundcolor: "cadetblue" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Hire Me", hire_path, class:"nav-link", backgroundcolor: "honeydew" %>
         </li>
       </ul>
 

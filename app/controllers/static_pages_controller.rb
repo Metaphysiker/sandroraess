@@ -16,4 +16,8 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def visits
+
+  end
+
 end

@@ -1,0 +1,4 @@
+<%= geo_chart Ahoy::Visit.group(:country).count %>
+<br>
+<%= line_chart Ahoy::Visit.group_by_day(:started_at).count %>
+

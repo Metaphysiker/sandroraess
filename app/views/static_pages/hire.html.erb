@@ -108,6 +108,7 @@
         $(".btn").click(function(){
             console.log($(this).attr( "data-target" ));
             toggleButton($("#" + $(this).attr( "data-target" )));
+            ahoy.track("hire: " + $(this).attr( "data-target" ), {language: "JavaScript"});
         });
 
         function toggleButton(div) {

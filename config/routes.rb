@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/hire', to: 'static_pages#hire'
 
+  get '/visits', to: 'static_pages#visits'
+
 end
