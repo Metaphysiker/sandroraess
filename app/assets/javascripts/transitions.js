@@ -41,6 +41,7 @@ $( document ).ready(function() {
     {
         mode = mode || "Basic";
 
+        //ahoy.track(mode, {language: "JavaScript"});
         console.log("In");
         console.log("mode: " + mode);
 
@@ -83,7 +84,7 @@ $( document ).ready(function() {
                 $(this).addClass('animated fadeInRight').dequeue();
             });
         });
-        ahoy.track("welcome", {language: "JavaScript"});
+        //ahoy.track("welcome", {language: "JavaScript"});
     };
 
     $.WelcomeOut = function(){
@@ -106,7 +107,7 @@ $( document ).ready(function() {
         console.log("wisdom in");
         //$(".jumbotron").css({ backgroundColor: '#CD5C5C' });
         //$(".jumbotron").addClass('indianred')
-        ahoy.track("wisdom", {language: "JavaScript"});
+       // ahoy.track("wisdom", {language: "JavaScript"});
     };
 
     $.WisdomOut = function(){
@@ -126,7 +127,7 @@ $( document ).ready(function() {
                 $(this).addClass('animated fadeInUp').dequeue();
             });
         });
-        ahoy.track("music", {language: "JavaScript"});
+        //ahoy.track("music", {language: "JavaScript"});
     };
 
     $.MusicOut = function(){
@@ -143,7 +144,7 @@ $( document ).ready(function() {
         });
     };
 
-    //wisdom
+    //hire
     $.HireIn = function(){
         $("h1").addClass("animated fadeInDown");
         console.log("hire in");
@@ -162,7 +163,7 @@ $( document ).ready(function() {
                 $(this).addClass('animated bounceIn').dequeue();
             });
         });
-        ahoy.track("hire", {language: "JavaScript"});
+        //ahoy.track("hire", {language: "JavaScript"});
     };
 
 
