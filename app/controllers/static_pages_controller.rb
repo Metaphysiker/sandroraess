@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
 
   def welcome
-    #VisitMailer.visit_email()
+    logger.debug "welcome!"
+    VisitMailer.visit_email()
   end
 
   def wisdom

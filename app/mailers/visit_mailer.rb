@@ -1,5 +1,5 @@
 class VisitMailer < ApplicationMailer
-  default from: "s.raess@me.com"
+  default from: "philotester5@gmail.com"
   logger.debug "VisitMailer?"
 
   def visit_email()
