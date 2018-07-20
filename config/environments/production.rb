@@ -95,6 +95,7 @@ Rails.application.configure do
       :address        => "smtp.mailgun.org",
       :user_name      => 'postmaster@sandboxa6a6272d42e5487f85b6059b25fac83e.mailgun.org',
       :password       => Rails.application.secrets.mail_pw,
+      :domain         => 'sandboxa6a6272d42e5487f85b6059b25fac83e.mailgun.org',
       :authentication => :plain,
   }
 end
