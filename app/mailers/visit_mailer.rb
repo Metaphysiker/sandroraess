@@ -3,6 +3,7 @@ class VisitMailer < ApplicationMailer
 
   def visit_email(params)
     @params = params
+    @currentvisit = current_visit
   mail(to: 's.raess@me.com', subject: 'Visit!')
 end
 
