@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def welcome
-    VisitMailer.visit_email().deliver
+    #VisitMailer.visit_email().deliver
   end
 
   def wisdom
