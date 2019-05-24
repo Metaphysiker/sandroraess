@@ -20,4 +20,8 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def essays
+    
+  end
+
 end
