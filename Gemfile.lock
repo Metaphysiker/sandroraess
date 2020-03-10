@@ -232,7 +232,7 @@ GEM
     unf_ext (0.0.7.5)
     unf_ext (0.0.7.5-x64-mingw32)
     unf_ext (0.0.7.5-x86-mingw32)
-    user_agent_parser (2.4.1)
+    user_agent_parser (2.6.0)
     web-console (3.6.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
