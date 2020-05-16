@@ -55,6 +55,8 @@ $( document ).ready(function() {
             $.MusicIn();
         } else if (mode == "Hire"){
             $.HireIn();
+        }  else if (mode == "Essays"){
+            $.EssaysIn();
         }
 
     };
@@ -166,6 +168,22 @@ $( document ).ready(function() {
         //ahoy.track("hire", {language: "JavaScript"});
     };
 
+    //music
+    $.EssaysIn = function(){
+        console.log("essays in");
+
+        $(".picture").addClass("animated fadeInDown");
+        $("h1").addClass("animated fadeInDown");
+
+        $( ".jumbotron" ).find("li").each(function( index ) {
+
+            $(this).delay(150*index).queue(function() {
+                $(this).addClass('animated fadeInUp').dequeue();
+            });
+        });
+        //ahoy.track("music", {language: "JavaScript"});
+    };
+
 
     $('#ggax').click(function (e) { //put 'a' in there
         e.preventDefault();// prevent default anchor behavior
@@ -206,5 +224,3 @@ $( document ).ready(function() {
     }( jQuery ));
 
 });
-
-

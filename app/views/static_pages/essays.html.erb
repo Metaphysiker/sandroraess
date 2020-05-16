@@ -1,26 +1,32 @@
-<div id="transition" class="hiddenfromstart">Music</div>
+<div id="transition" class="hiddenfromstart">Essays</div>
 
-<div class="jumbotron cadetblue">
+<div class="jumbotron honeydew">
   <div class="row">
     <div class="col-12 text-center">
       <div class="picture hiddenfromstart">
-      <%= image_tag("rain3.jpg", class: "img-fluid rounded mw-100") %>
+      <%#= image_tag("rain3.jpg", class: "img-fluid rounded mw-100") %>
       <br>
       <br>
       <p>
         <b>
-          Aren't random public domain photos just awesome? <br></b>(They sometimes trick people into thinking that my website is artsy!)
+
       </p>
     </div>
 
       <h1 class="text-center hiddenfromstart">
-        <%= t 'music' %>
+        <%= t 'essays' %>
       </h1>
       <hr />
 
-      <ul>
+      <ul class="">
         <li class="mb-3 hiddenfromstart">
-          Basically, I'm a Philosopher, Programmer and Death Metaller.
+          <%= link_to "Was ist Tierethik? - Eine Einführung", "https://www.philosophie.ch/artikel/was-ist-tierethik" %>
+        </li>
+        <li class="mb-3 hiddenfromstart">
+          <%= link_to "Ist es schlimmer, ein glückliches Tier zu töten, als ein unglückliches?", "https://www.philosophie.ch/artikel/ist-es-schlimmer-ein-glueckliches-tier-zu-toeten-als-ein-unglueckliches" %>
+        </li>
+        <li class="mb-3 hiddenfromstart">
+          <%= link_to "Staatsbürgerschaft für Tiere?", "https://www.philosophie.ch/artikel/staatsbuergerschaft-fuer-tiere" %>
         </li>
       </ul>
 
