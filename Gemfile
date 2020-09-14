@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+#gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-binary-edge'
 
 gem 'mailgun-ruby', '~>1.1.6'
 gem 'bootstrap', '~> 4.0.0'
