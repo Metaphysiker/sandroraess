@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'grover'
 gem 'wicked_pdf'
 #gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-binary-edge'
