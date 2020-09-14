@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sandro Räss</title>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+
+  <div class="container">
+
+    <%= yield %>
+  </div>
+
+  </body>
+</html>
+<script>
+    $( document ).ready(function() {
+        $.TransitionIn($("#transition").text());
+    });
+</script>

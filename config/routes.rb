@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/visits', to: 'static_pages#visits'
 
+  get '/cv', to: 'static_pages#cv'
+
 end

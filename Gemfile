@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 gem 'mailgun-ruby', '~>1.1.6'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
