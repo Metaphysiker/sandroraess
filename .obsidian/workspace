@@ -1,0 +1,91 @@
+{
+  "main": {
+    "id": "1268def42a9d9777",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a3f2dc56dcc0a52",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5b0498cff4619a57",
+    "type": "split",
+    "children": [
+      {
+        "id": "f55e14f276cb7b42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c0cc98108b21069e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "40ef589ae18058a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 455
+  },
+  "right": {
+    "id": "e965864a9cebc757",
+    "type": "split",
+    "children": [
+      {
+        "id": "b52506413cb93d7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "22717fae305dd99b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "9a3f2dc56dcc0a52",
+  "lastOpenFiles": [
+    "app/assets/images/martigny.mp4",
+    "Untitled.md",
+    "obsidian.md"
+  ]
+}
